@@ -26,10 +26,10 @@ body {
 
 .popup button {
     display: block;
-    position: absolute;
-    top: 0;
+    /* position: absolute; */
+    bottom: 5;
     right: 0;
-    margin: 10px 10px auto;
+    margin: 30px auto;
     background-color: transparent;
     font-size: 30px;
     color: #ffffff;
