@@ -26,10 +26,17 @@ body {
 
 .popup button {
     display: block;
-    margin: 0 0 20px auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px 10px auto;
     background-color: transparent;
     font-size: 30px;
-    color: #c5c5c5;
+    color: #ffffff;
+    background: #03549a;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
     border: none;
     outline: none;
     cursor: pointer;
