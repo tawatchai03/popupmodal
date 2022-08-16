@@ -1,14 +1,14 @@
 /* popup-modal container */
 
 .popup-modal {
-    /* padding: 0 auto;*/
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    border-radius: 8px;
-    display: none;
-    text-align: center;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 99999;
 }
 
 .btt-close {
@@ -26,12 +26,19 @@
     background-color: #ffffff;
 }
 
+.popup__width {
+    width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    border-radius: 8px;
+}
+
 
 /* container Slideshow*/
 
 .slider__nav {
     position: absolute;
-    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     text-align: center;
@@ -54,9 +61,93 @@
     border: 1px #333 solid;
 }
 
-@media screen and (max-width: 640px) {
+@media(max-width: 1024px) {
+    .popup__width {
+        margin-top: 35%;
+    }
+    .slider__nav {
+        width: 100%;
+    }
+    .btt-close {
+        display: block;
+        right: 0;
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: bold;
+        color: #000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+}
+
+@media(max-width: 982px) {
+    .slider__nav {
+        width: 100%;
+    }
+    .btt-close {
+        display: block;
+        right: 0;
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: bold;
+        color: #000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+}
+
+@media(max-width: 768px) {
+    .slider__nav {
+        width: 100%;
+    }
+    .btt-close {
+        display: block;
+        right: 0;
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: bold;
+        color: #000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffffff;
+    }
+}
+
+@media(max-width: 640px) {
+    .popup__width {
+        width: 300px;
+        margin-top: 50%;
+    }
+    .slider__nav {
+        width: 100%;
+    }
     .slider__navlink {
-        height: 12px;
-        width: 12px;
+        height: 15px;
+        width: 15px;
+    }
+    .btt-close {
+        display: block;
+        right: 0;
+        margin: 0 auto;
+        font-size: 35px;
+        font-weight: bold;
+        color: #000;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        outline: none;
+        cursor: pointer;
+        background-color: #ffffff;
     }
 }

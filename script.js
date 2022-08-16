@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
     endTime.setDate(16);
     endTime.setMonth(8);
     endTime.setYear(22);
-    endTime.setHours(12);
+    endTime.setHours(18);
     endTime.setMinutes(0);
     endTime.setSeconds(0);
 
@@ -38,39 +38,19 @@ document.querySelector("#close").addEventListener("click", function() {
     document.querySelector(".popup-modal").style.display = "none";
 });
 
-
 //document.body.addEventListener("click", function() {
 //  document.querySelector(".popup-modal").style.display = "none";
 //});
 
-
-
 //container Slideshow
-/*let navlinks = document.getElementsByClassName("slider__navlink");
-let currentSlide = 0;
-
-document.querySelectorAll('.slider__navlink').forEach((bullet, bulletIndex) => {
-    bullet.addEventListener('click', () => {
-        if (currentSlide !== bulletIndex) {
-            changeSlide(bulletIndex);
-        }
-    })
-})*/
-
 var slideIndex = 1;
 showSlides(slideIndex);
 
 // Start autoplaying automatically
 var autoplayInterval = setInterval(function() {
-
     // Get element via id and click next
     document.getElementById("next").click();
-
-
 }, 4000); // Do this every 1 second, increase this!
-
-// Stop function added to button
-
 
 // Next/previous controls
 function plusSlides(n) {
