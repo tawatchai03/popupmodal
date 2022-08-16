@@ -16,7 +16,7 @@ window.addEventListener("load", function() {
     endTime.setDate(16);
     endTime.setMonth(8);
     endTime.setYear(22);
-    endTime.setHours(18);
+    endTime.setHours(22);
     endTime.setMinutes(0);
     endTime.setSeconds(0);
 
