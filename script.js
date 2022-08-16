@@ -1,3 +1,4 @@
+// popup-modal container 
 window.addEventListener("load", function() {
     var zoneTime = new Date().toLocaleString('th-TH', { timeZone: 'Asia/jakarta' });
     var currentTime = new Date();
@@ -15,7 +16,7 @@ window.addEventListener("load", function() {
     endTime.setDate(16);
     endTime.setMonth(8);
     endTime.setYear(22);
-    endTime.setHours(5);
+    endTime.setHours(12);
     endTime.setMinutes(0);
     endTime.setSeconds(0);
 
@@ -38,12 +39,66 @@ document.querySelector("#close").addEventListener("click", function() {
 });
 
 
-document.body.addEventListener("click", function() {
-    document.querySelector(".popup-modal").style.display = "none";
-});
+//document.body.addEventListener("click", function() {
+//  document.querySelector(".popup-modal").style.display = "none";
+//});
 
-// document.body.addEventListener('click', () => {
-//     // document.querySelector(".popup").style.display = "none";
 
-//     console.log('mouse click');
-// });
+
+//container Slideshow
+/*let navlinks = document.getElementsByClassName("slider__navlink");
+let currentSlide = 0;
+
+document.querySelectorAll('.slider__navlink').forEach((bullet, bulletIndex) => {
+    bullet.addEventListener('click', () => {
+        if (currentSlide !== bulletIndex) {
+            changeSlide(bulletIndex);
+        }
+    })
+})*/
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Start autoplaying automatically
+var autoplayInterval = setInterval(function() {
+
+    // Get element via id and click next
+    document.getElementById("next").click();
+
+
+}, 4000); // Do this every 1 second, increase this!
+
+// Stop function added to button
+
+
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("slider__navlink");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
